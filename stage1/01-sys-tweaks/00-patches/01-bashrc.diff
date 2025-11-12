@@ -29,5 +29,14 @@
 +    alias fgrep='fgrep --color=auto'
 +    alias egrep='egrep --color=auto'
  fi
- 
+
  # colored GCC warnings and errors
+@@ -111,3 +111,8 @@
+     . /etc/bash_completion
+   fi
+ fi
++
++# Auto-start Wayfire on tty1
++if [ "$(tty)" = "/dev/tty1" ]; then
++    wayfire -c ~/.config/wayfire.ini
++fi

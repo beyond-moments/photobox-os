@@ -1,0 +1,10 @@
+services:
+  app:
+    image: ghcr.io/beyond-moments/photobox:latest
+    platform: linux/arm64
+    environment:
+      FOO: "BAR"
+    ports:
+      - "3000:3000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
